@@ -29,6 +29,8 @@ Menu entries are defined as
     
 Backgrounds are stored in /public/backgrounds in any web-compatible format. Name them by number from 1 upwards, with no extension. A few backgrounds are already included in the default install.
 
+All configuration changes require a system reboot to take effect.
+
 ## Installation steps (designed for fedora only), replace [KIOSK USERNAME] with the user you will use for the kiosk:
 
 1 - Create a new user or use an existing user without sudo access. The following process will install Cockpit, so ensure that all administrators have passwords and you are happy with your computer being exposed to its network. If you are unsure about this, feel free to google "Cockpit fedora" and find out more.
