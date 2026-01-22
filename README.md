@@ -70,7 +70,7 @@ Add the following lines below the line "[daemon]". Ensure that any other existin
     AutomaticLoginEnable=True
     AutomaticLogin=[KIOSK USERNAME]
 
-10 - Edit the files /home/[KIOSK USERNAME]/.local/bin/iwltech-kiosk.sh to replace [KIOSK USERNAME] and /home/[KIOSK USERNAME]/.local/bin/gnome-kiosk-script to replace [KIOSK USERNAME] with its proper value.
+10 - Edit the files /home/[KIOSK USERNAME]/.local/bin/iwltech-kiosk.sh to replace [KIOSK USERNAME], /home/[KIOSK USERNAME]/.local/bin/gnome-kiosk-script and /home/[KIOSK USERNAME]/iwltech-kiosk/settings.js to replace [KIOSK USERNAME] with its proper value.
 
 11 - Edit the configuration as listed above in the "Configuration" section to your desired settings. The files can be found under /home/[KIOSK USERNAME]/iwltech-kiosk
 

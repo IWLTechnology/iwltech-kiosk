@@ -9,7 +9,7 @@ const dev_menu = [
     ["Admin mode", `firefox --new-window https://localhost:9090`],
     [
         "Remove kiosk mode",
-        `pkexec sed -i 's/Session=.*/Session=gnome/' /var/lib/AccountsService/users/gametime && reboot`
+        `pkexec sed -i 's/Session=.*/Session=gnome/' /var/lib/AccountsService/users/[KIOSK USERNAME] && reboot`
     ]
 ];
 
