@@ -6,11 +6,7 @@ const menu = [
 const dev_menu = [
     ["Files", `nautilus ~`, "Files.png"],
     ["Terminal", `ptyxis --new-window`, "Terminal.png"],
-    ["Admin mode", `firefox --new-window https://localhost:9090`],
-    [
-        "Remove kiosk mode",
-        `pkexec sed -i 's/Session=.*/Session=gnome/' /var/lib/AccountsService/users/[KIOSK USERNAME] && reboot`
-    ]
+    ["Admin mode", `firefox --new-window https://localhost:9090`]
 ];
 
 module.exports = { menu, dev_menu };
