@@ -78,7 +78,11 @@ Add the following lines below the line "[daemon]". Ensure that any other existin
 
 12 - Optionally, set the backdrop of your kiosk account to desktop_background.png
 
-13 - Reboot the system. You should be all ready to use the new kiosk mode.
+13 - Optionally, you can install the plymouth bootscreen by copying iwltech-kiosk-boot into /usr/share/plymouth/themes/ and running the following:
+
+    sudo plymouth-set-default-theme -R iwltech-kiosk-boot
+
+14 - Reboot the system. You should be all ready to use the new kiosk mode.
 
 ## Licensing
 
