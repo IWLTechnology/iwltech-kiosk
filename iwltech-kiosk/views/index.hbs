@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="stylesheet" href="./w3.css" />
+    <title>IWLTech Kiosk Menu</title>
+    <link href="./menu.css" rel="stylesheet" />
+  </head>
+
+  <body onload="initMenu()">
+    <div id="enabled" class="w3-center" style="display: none">
+      <div class="w3-bar" style="width: 100%">
+        <div class="w3-left w3-bar-item"><button id="hostname" class="barBtn w3-btn w3-round"></button></div>
+        <div class="w3-right w3-bar-item">
+          <span
+            ><button onclick="devBtn(0)" class="barBtn w3-btn w3-round">
+              <img src="./dev_icon.png" id="devIconImg" alt="Dev Menu" /></button
+          ></span>
+          <span
+            ><button onclick="powerBtn()" class="barBtn w3-btn w3-round">
+              <img src="./power_icon.png" id="powerOptImg" alt="Power Options" /></button
+          ></span>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div id="actions" class="w3-center"></div>
+    </div>
+    <div id="devMenu" class="w3-center" style="display: none">
+      <div class="w3-bar" style="width: 100%">
+        <div class="w3-left w3-bar-item"><button id="hostname2" class="barBtn w3-btn w3-round"></button></div>
+        <div class="w3-right w3-bar-item">
+          <span
+            ><button onclick="devBtn(1)" class="barBtn w3-btn w3-round">
+              <img src="./apps_icon.png" id="appsIconImg" alt="App Menu" /></button
+          ></span>
+          <span
+            ><button onclick="powerBtn2()" class="barBtn w3-btn w3-round">
+              <img src="./power_icon.png" id="powerOptImg" alt="Power Options" /></button
+          ></span>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div id="dev_actions" class="w3-center"></div>
+    </div>
+    <div id="powerOptions" class="w3-center" style="display: none">
+      <br />
+      <br />
+      <div>
+        <br />
+        <button class="powerMenuButton w3-btn w3-round-large w3-purple" onclick="powerMenu(0)">
+          <p>Shut Down</p></button
+        ><br />
+        <button class="powerMenuButton w3-btn w3-round-large w3-purple" onclick="powerMenu(1)">
+          <p>Restart</p></button
+        ><br />
+        <button class="powerMenuButton w3-btn w3-round-large w3-purple" onclick="powerMenu(2)">
+          <p>Log Out</p></button
+        ><br />
+        <button class="powerMenuButton w3-btn w3-round-large w3-purple" onclick="powerMenu(3)">
+          <p>Back</p></button
+        ><br />
+      </div>
+    </div>
+    <div id="confirmScreen" class="w3-center" style="display: none">
+      <br />
+      <br />
+      <div>
+        <h1 style="color: red"><span id="confirmAction">Shut down</span>?</h1>
+        <br />
+        <button class="powerMenuButton w3-btn w3-round-large w3-purple" onclick="confirmScreen(0)">
+          <p>No</p>
+        </button>
+        <button class="powerMenuButton w3-btn w3-round-large w3-red" onclick="confirmScreen(1)">
+          <p>Yes</p>
+        </button>
+      </div>
+    </div>
+    <div id="errorBox" class="w3-center" style="display: none">
+      <br />
+      <p id="error" style="color: red"></p>
+      <p>
+      Press F5 to reload.
+      </p>
+    </div>
+    <noscript>
+      <div class="w3-center">
+        <br />
+        <p style="color: red">Error - Javascript is Disabled</p>
+        <br />
+      </div>
+    </noscript>
+    <script src="./index.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+  </body>
+</html>

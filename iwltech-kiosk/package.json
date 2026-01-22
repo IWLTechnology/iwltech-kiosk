@@ -1,0 +1,46 @@
+{
+  "name": "iwltech-kiosk",
+  "version": "1.0.0",
+  "description": "A customisable locked-down local kiosk app written with NodeJS and HTML designed for use with Fedora and GNOME-kiosk.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main"
+  },
+  "author": "IWLTechnology",
+  "license": "GPL-3.0-only",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "express": "^5.2.1",
+    "hbs": "^4.2.0",
+    "join": "^3.0.0",
+    "socket.io": "^4.8.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IWLTechnology/iwltech-kiosk.git"
+  },
+  "keywords": [
+    "kiosk",
+    "IWLTech",
+    "iwltech",
+    "gnome-kiosk",
+    "gnome",
+    "fedora",
+    "linux",
+    "browser",
+    "NodeJS",
+    "nodejs",
+    "js",
+    "JavaScript",
+    "html",
+    "HTML",
+    "css",
+    "CSS"
+  ],
+  "bugs": {
+    "url": "https://github.com/IWLTechnology/iwltech-kiosk/issues"
+  },
+  "homepage": "https://github.com/IWLTechnology/iwltech-kiosk"
+}
