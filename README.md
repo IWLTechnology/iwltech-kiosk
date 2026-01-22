@@ -74,7 +74,9 @@ Add the following lines below the line "[daemon]". Ensure that any other existin
 
 11 - Edit the configuration as listed above in the "Configuration" section to your desired settings. The files can be found under /home/[KIOSK USERNAME]/iwltech-kiosk
 
-12 - Reboot the system. You should be all ready to use the new kiosk mode.
+12 - Optionally, set the backdrop of your kiosk account to desktop_background.png
+
+13 - Reboot the system. You should be all ready to use the new kiosk mode.
 
 ## Licensing
 
