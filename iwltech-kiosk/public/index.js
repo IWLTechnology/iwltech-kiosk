@@ -37,6 +37,8 @@ function recvData(data) {
         parseDevActions();
         parseSysData();
         LOCKED = false;
+        setInterval(updateTime, 100);
+        updateTime();
         document.getElementById("enabled").style.display = "block";
       } else {
         displayError("Failed to fetch actions.");
@@ -158,7 +160,7 @@ function powerMenu(opt) {
       document.getElementById("powerOptions").style.display = "none";
       break;
     case 2:
-      document.getElementById("confirmAction").innerHTML = "Log Out";
+      document.getElementById("confirmAction").innerHTML = "Reset Session";
       confirmActionDoes = "logout";
       document.getElementById("confirmScreen").style.display = "block";
       document.getElementById("powerOptions").style.display = "none";
@@ -199,4 +201,11 @@ function actionResult(res) {
 function setBackground() {
   bgId = Math.floor(Math.random() * sysData.noOfBackgrounds) + 1;
   document.body.style.backgroundImage = `url("./backgrounds/${bgId}")`;
+}
+
+function updateTime(){
+    var currentTime = new Date();
+    var timeString = currentTime.getHours().toString().padStart(2, '0') + ":" + currentTime.getMinutes().toString().padStart(2, '0') + ":" + currentTime.getSeconds().toString().padStart(2, '0');
+    document.getElementById("time").innerHTML = timeString;
+    document.getElementById("time2").innerHTML = timeString;
 }

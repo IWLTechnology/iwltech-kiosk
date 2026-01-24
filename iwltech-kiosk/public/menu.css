@@ -16,7 +16,7 @@ span {
     font-size: 1.2em;
 }
 
-#hostname {
+#hostname, #hostname2, #time, #time2 {
     font-size: 1.5em;
     font-family: Alfa Slab One;
 }
@@ -24,6 +24,12 @@ span {
 #hostname2 {
     font-size: 1.5em;
     font-family: Alfa Slab One;
+}
+
+.timeOuter {
+    position: absolute;
+    left: 45.5vw;
+    right: 45.5vw;
 }
 
 .action {

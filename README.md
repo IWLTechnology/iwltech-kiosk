@@ -55,34 +55,36 @@ All configuration changes require a system reboot to take effect.
     
 7 - Copy over the kiosk app and make it executable
 
-    cp -r iwltech-kiosk /home/[KIOSK USERNAME]/iwltech-kiosk
-    cp iwltech-kiosk.sh /home/[KIOSK USERNAME]/.local/bin/iwltech-kiosk.sh
-    chmod +x /home/[KIOSK USERNAME]/.local/bin/iwltech-kiosk.sh
+    cp -r iwltech-kiosk /opt
+    cp iwltech-kiosk.sh /opt/iwltech-kiosk/iwltech-kiosk.sh
+    chmod +x /opt/iwltech-kiosk/iwltech-kiosk.sh
     cp gnome-kiosk-script /home/[KIOSK USERNAME]/.local/bin/gnome-kiosk-script
     chmod +x /home/[KIOSK USERNAME]/.local/bin/gnome-kiosk-script
     
-8 - Install NodeJS dependencies
+8 - Change the owner of /home/[KIOSK USERNAME]/.local/bin/gnome-kiosk-script to root.
+    
+9 - Install NodeJS dependencies
 
-    cd /home/[KIOSK USERNAME]/iwltech-kiosk
+    cd /opt/iwltech-kiosk
     npm install
 
-9 - Edit the file /etc/gdm/custom.conf (sudo nano /etc/gdm/custom.conf).
+10 - Edit the file /etc/gdm/custom.conf (sudo nano /etc/gdm/custom.conf).
 Add the following lines below the line "[daemon]". Ensure that any other existing entries of AutomaticLoginEnable and AutomaticLogin are removed.
 
     AutomaticLoginEnable=True
     AutomaticLogin=[KIOSK USERNAME]
 
-10 - Edit the files /home/[KIOSK USERNAME]/.local/bin/iwltech-kiosk.sh to replace [KIOSK USERNAME] and /home/[KIOSK USERNAME]/.local/bin/gnome-kiosk-script to replace [KIOSK USERNAME] with its proper value.
+11 - Edit the file /opt/iwltech-kiosk/iwltech-kiosk.sh to replace [KIOSK USERNAME] with its proper value.
 
-11 - Edit the configuration as listed above in the "Configuration" section to your desired settings. The files can be found under /home/[KIOSK USERNAME]/iwltech-kiosk
+12 - Edit the configuration as listed above in the "Configuration" section to your desired settings. The files can be found under /opt/iwltech-kiosk
 
-12 - Optionally, set the backdrop of your kiosk account to desktop_background.png
+13 - Optionally, set the backdrop of your kiosk account to desktop_background.png
 
-13 - Optionally, you can install the plymouth bootscreen by copying iwltech-kiosk-boot into /usr/share/plymouth/themes/ and running the following:
+14 - Optionally, you can install the plymouth bootscreen by copying iwltech-kiosk-boot into /usr/share/plymouth/themes/ and running the following:
 
     sudo plymouth-set-default-theme -R iwltech-kiosk-boot
 
-14 - Reboot the system. You should be all ready to use the new kiosk mode.
+15 - Reboot the system. You should be all ready to use the new kiosk mode.
 
 ## Licensing
 

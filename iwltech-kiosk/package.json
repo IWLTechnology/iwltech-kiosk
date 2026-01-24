@@ -1,6 +1,6 @@
 {
   "name": "iwltech-kiosk",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A customisable locked-down local kiosk app written with NodeJS and HTML designed for use with Fedora and GNOME-kiosk.",
   "main": "main.js",
   "scripts": {
@@ -39,8 +39,5 @@
     "css",
     "CSS"
   ],
-  "bugs": {
-    "url": "https://github.com/IWLTechnology/iwltech-kiosk/issues"
-  },
   "homepage": "https://github.com/IWLTechnology/iwltech-kiosk"
 }

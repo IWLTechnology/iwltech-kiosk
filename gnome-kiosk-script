@@ -1,5 +1,5 @@
 #!/bin/sh
-bash /home/[KIOSK USERNAME]/.local/bin/iwltech-kiosk.sh
+bash /opt/iwltech-kiosk/iwltech-kiosk.sh
 
 sleep 1.0
 exec "$0" "$@"

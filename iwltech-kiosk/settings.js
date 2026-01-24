@@ -4,8 +4,6 @@ const menu = [
 ];
 
 const dev_menu = [
-    ["Files", `nautilus ~`, "Files.png"],
-    ["Terminal", `ptyxis --new-window`, "Terminal.png"],
     ["Admin mode", `firefox --new-window https://localhost:9090`]
 ];
 
