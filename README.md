@@ -41,7 +41,7 @@ All configuration changes require a system reboot to take effect.
 
 4 - Install dependencies
 
-    sudo dnf install gnome-kiosk gnome-kiosk-script-session cockpit
+    sudo dnf install gnome-kiosk gnome-kiosk-script-session cockpit firefox nodejs nodejs-npm
     sudo systemctl enable --now cockpit.socket
     
 5 - Back up user data and enable kiosk mode for the kiosk user
@@ -52,6 +52,8 @@ All configuration changes require a system reboot to take effect.
 6 - Prevent the kiosk interface from being exposed over the network
 
     sudo firewall-cmd --permanent --remove-port=3000/tcp
+    
+Also edit /etc/cockpit/disallowed-users (sudo nano /etc/cockpit/disallowed-users) and add your [KIOSK USERNAME] to it. This will stop the kiosk's files from being accessible over its network.
     
 7 - Copy over the kiosk app and make it executable
 
