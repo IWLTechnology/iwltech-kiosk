@@ -60,10 +60,13 @@ Also edit /etc/cockpit/disallowed-users (sudo nano /etc/cockpit/disallowed-users
     cp -r iwltech-kiosk /opt
     cp iwltech-kiosk.sh /opt/iwltech-kiosk/iwltech-kiosk.sh
     chmod +x /opt/iwltech-kiosk/iwltech-kiosk.sh
+    mkdir /home/[KIOSK USERNAME]/.local/bin
     cp gnome-kiosk-script /home/[KIOSK USERNAME]/.local/bin/gnome-kiosk-script
     chmod +x /home/[KIOSK USERNAME]/.local/bin/gnome-kiosk-script
     
 8 - Change the owner of /home/[KIOSK USERNAME]/.local/bin/gnome-kiosk-script to root.
+
+    sudo chown root /home/[KIOSK USERNAME]/.local/bin/gnome-kiosk-script
     
 9 - Install NodeJS dependencies
 
