@@ -1,0 +1,6 @@
+#!/bin/sh
+bash /opt/iwltech-kiosk/iwltech-kiosk.sh
+
+sleep 1.0
+exec "$0" "$@"
+

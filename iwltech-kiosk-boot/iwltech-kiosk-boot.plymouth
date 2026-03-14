@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=IWLTech Kiosk Boot Screen
+Description=The plymouth splash for the IWLTech kiosk 
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/iwltech-kiosk-boot
+ScriptFile=/usr/share/plymouth/themes/iwltech-kiosk-boot/iwltech-kiosk-boot.script
